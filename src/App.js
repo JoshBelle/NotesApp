@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import NotesGrid from './components/NotesGrid';
+import TopPanel from './components/TopPanel';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="px-10 bg-slate-100">
+        <h1 className='px-10 py-5'>Notes</h1>
+        <TopPanel/>
+        <NotesGrid></NotesGrid>
     </div>
   );
 }
