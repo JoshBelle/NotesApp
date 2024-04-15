@@ -1,28 +1,41 @@
+// NotesGrid.js
 import React from 'react';
 import NotesItem from './NotesItem';
 import { useGetNotesQuery } from '../redux/apiSlice';
+import { useSelector } from "react-redux"
+
 
 const NotesGrid = () => {
-    const categoryColors = {
-        All: '#000000', // черный
-        Business: '#FF0000', // красный
-        Social: '#00FF00', // зеленый
-        Home: '#0000FF', // синий
-        Personal: '#FFFF00', // желтый
-    };
+  const filter = useSelector(state => state.filter)
+  const { data: notes, isLoading, isError } = useGetNotesQuery(filter);
 
-    const getCategoryColor = (category) => {
-      return categoryColors[category]
+  
+
+  const categoryColors = {
+    All: 'bg-black-400', // черный
+    Business: 'bg-red-400', // красный
+    Social: 'bg-green-400', // зеленый
+    Home: 'bg-blue-400', // синий
+    Personal: 'bg-yellow-400', // желтый
+  };
+
+  const getColor = (category) => {
+    for (let key in categoryColors) {
+      if (category.includes(key)) {
+        return categoryColors[key];
+      }
     }
+    return '';
+  };
 
-    const { data: notes, isLoading, isError } = useGetNotesQuery();
-    console.log(notes);
-    return (
-        <div className="w-1200 bg-slate-100 mx-auto grid grid-cols-4 gap-4 p-10">
-            {notes &&
-                notes.map((note) => <NotesItem color={() => getCategoryColor(note.category)}  key={note.Title} note={note} />)}
-        </div>
-    );
+  return (
+    <div className="w-1200 bg-slate-100 mx-auto grid grid-cols-4 gap-4 p-10">
+      {notes &&
+        notes.map((note) => (
+          <NotesItem key={note.title} color={getColor(note.category)} note={note} />
+        ))}
+    </div>
+  );
 };
 
 export default NotesGrid;

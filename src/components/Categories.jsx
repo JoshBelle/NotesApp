@@ -1,9 +1,7 @@
-import React from 'react';
 import CategoriesItem from './CategoriesItem';
 
 const Categories = () => {
-
-    const categories = ['All', 'Business', 'Social', 'Home', 'Personal'];
+    const categories = ['all', 'Business', 'Social', 'Home', 'Personal'];
 
     return (
         <div className="flex gap-[12px]">
