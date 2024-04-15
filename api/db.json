@@ -1,122 +1,125 @@
-[
-    {
-        "Title": "Meeting with Investors",
-        "Description": "Prepare presentation and financial report for the upcoming meeting with investors.",
-        "Date": "2024-04-15",
-        "Category": ["Business", "Personal"]
-    },
-    {
-        "Title": "Volunteer Work",
-        "Description": "Help organize a charity event for the local community.",
-        "Date": "2024-04-17",
-        "Category": ["Social"]
-    },
-    {
-        "Title": "Grocery Shopping",
-        "Description": "Buy fruits, vegetables, and household essentials.",
-        "Date": "2024-04-14",
-        "Category": ["Home", "Personal"]
-    },
-    {
-        "Title": "Networking Event",
-        "Description": "Attend a networking event to expand professional connections.",
-        "Date": "2024-04-18",
-        "Category": ["Business", "Social"]
-    },
-    {
-        "Title": "Family Dinner",
-        "Description": "Plan and prepare a special dinner for the family.",
-        "Date": "2024-04-16",
-        "Category": ["Home", "Personal"]
-    },
-    {
-        "Title": "Team Building Activity",
-        "Description": "Organize a team building activity for the department.",
-        "Date": "2024-04-20",
-        "Category": ["Business"]
-    },
-    {
-        "Title": "Book Club Meeting",
-        "Description": "Read assigned chapters and prepare discussion points for the book club meeting.",
-        "Date": "2024-04-19",
-        "Category": ["Social", "Personal"]
-    },
-    {
-        "Title": "Home Maintenance",
-        "Description": "Schedule plumber to fix leaking faucet and gardener to mow the lawn.",
-        "Date": "2024-04-13",
-        "Category": ["Home"]
-    },
-    {
-        "Title": "Client Presentation",
-        "Description": "Finalize slides and rehearse presentation for the client meeting.",
-        "Date": "2024-04-17",
-        "Category": ["Business"]
-    },
-    {
-        "Title": "Yoga Class",
-        "Description": "Attend yoga class for relaxation and fitness.",
-        "Date": "2024-04-15",
-        "Category": ["Personal"]
-    },
-    {
-        "Title": "Community Cleanup",
-        "Description": "Join the neighborhood cleanup initiative to keep the environment clean.",
-        "Date": "2024-04-20",
-        "Category": ["Social"]
-    },
-    {
-        "Title": "Financial Planning",
-        "Description": "Review budget and set financial goals for the next quarter.",
-        "Date": "2024-04-14",
-        "Category": ["Business", "Personal"]
-    },
-    {
-        "Title": "Movie Night",
-        "Description": "Host a movie night with friends, featuring classic films.",
-        "Date": "2024-04-16",
-        "Category": ["Social", "Personal"]
-    },
-    {
-        "Title": "Home Cooking",
-        "Description": "Experiment with new recipes and cook a homemade meal.",
-        "Date": "2024-04-19",
-        "Category": ["Home", "Personal"]
-    },
-    {
-        "Title": "Staff Training Session",
-        "Description": "Prepare training materials and conduct a session on new software tools.",
-        "Date": "2024-04-18",
-        "Category": ["Business"]
-    },
-    {
-        "Title": "Coffee with Friends",
-        "Description": "Catch up with friends over a cup of coffee at the local cafe.",
-        "Date": "2024-04-13",
-        "Category": ["Social", "Personal"]
-    },
-    {
-        "Title": "Home Decor Shopping",
-        "Description": "Browse stores for new home decor items to freshen up the living space.",
-        "Date": "2024-04-15",
-        "Category": ["Home", "Personal"]
-    },
-    {
-        "Title": "Product Launch Preparation",
-        "Description": "Coordinate with marketing team and finalize details for the product launch event.",
-        "Date": "2024-04-19",
-        "Category": ["Business"]
-    },
-    {
-        "Title": "Morning Jog",
-        "Description": "Go for a morning jog to stay active and energized.",
-        "Date": "2024-04-14",
-        "Category": ["Personal"]
-    },
-    {
-        "Title": "Dinner Party",
-        "Description": "Host a dinner party for friends and colleagues.",
-        "Date": "2024-04-20",
-        "Category": ["Social", "Personal"]
-    }
-]
+{
+    "notes": [
+      {
+        "title": "Meeting with Investors",
+        "description": "Prepare presentation and financial report for the upcoming meeting with investors.",
+        "date": "2024-04-15",
+        "category": ["Business", "Personal"]
+      },
+      {
+        "title": "Volunteer Work",
+        "description": "Help organize a charity event for the local community.",
+        "date": "2024-04-17",
+        "category": ["Social"]
+      },
+      {
+        "title": "Grocery Shopping",
+        "description": "Buy fruits, vegetables, and household essentials.",
+        "date": "2024-04-14",
+        "category": ["Home", "Personal"]
+      },
+      {
+        "title": "Networking Event",
+        "description": "Attend a networking event to expand professional connections.",
+        "date": "2024-04-18",
+        "category": ["Business", "Social"]
+      },
+      {
+        "title": "Family Dinner",
+        "description": "Plan and prepare a special dinner for the family.",
+        "date": "2024-04-16",
+        "category": ["Home", "Personal"]
+      },
+      {
+        "title": "Team Building Activity",
+        "description": "Organize a team building activity for the department.",
+        "date": "2024-04-20",
+        "category": ["Business"]
+      },
+      {
+        "title": "Book Club Meeting",
+        "description": "Read assigned chapters and prepare discussion points for the book club meeting.",
+        "date": "2024-04-19",
+        "category": ["Social", "Personal"]
+      },
+      {
+        "title": "Home Maintenance",
+        "description": "Schedule plumber to fix leaking faucet and gardener to mow the lawn.",
+        "date": "2024-04-13",
+        "category": ["Home"]
+      },
+      {
+        "title": "Client Presentation",
+        "description": "Finalize slides and rehearse presentation for the client meeting.",
+        "date": "2024-04-17",
+        "category": ["Business"]
+      },
+      {
+        "title": "Yoga Class",
+        "description": "Attend yoga class for relaxation and fitness.",
+        "date": "2024-04-15",
+        "category": ["Personal"]
+      },
+      {
+        "title": "Community Cleanup",
+        "description": "Join the neighborhood cleanup initiative to keep the environment clean.",
+        "date": "2024-04-20",
+        "category": ["Social"]
+      },
+      {
+        "title": "Financial Planning",
+        "description": "Review budget and set financial goals for the next quarter.",
+        "date": "2024-04-14",
+        "category": ["Business", "Personal"]
+      },
+      {
+        "title": "Movie Night",
+        "description": "Host a movie night with friends, featuring classic films.",
+        "date": "2024-04-16",
+        "category": ["Social", "Personal"]
+      },
+      {
+        "title": "Home Cooking",
+        "description": "Experiment with new recipes and cook a homemade meal.",
+        "date": "2024-04-19",
+        "category": ["Home", "Personal"]
+      },
+      {
+        "title": "Staff Training Session",
+        "description": "Prepare training materials and conduct a session on new software tools.",
+        "date": "2024-04-18",
+        "category": ["Business"]
+      },
+      {
+        "title": "Coffee with Friends",
+        "description": "Catch up with friends over a cup of coffee at the local cafe.",
+        "date": "2024-04-13",
+        "category": ["Social", "Personal"]
+      },
+      {
+        "title": "Home Decor Shopping",
+        "description": "Browse stores for new home decor items to freshen up the living space.",
+        "date": "2024-04-15",
+        "category": ["Home", "Personal"]
+      },
+      {
+        "title": "Product Launch Preparation",
+        "description": "Coordinate with marketing team and finalize details for the product launch event.",
+        "date": "2024-04-19",
+        "category": ["Business"]
+      },
+      {
+        "title": "Morning Jog",
+        "description": "Go for a morning jog to stay active and energized.",
+        "date": "2024-04-14",
+        "category": ["Personal"]
+      },
+      {
+        "title": "Dinner Party",
+        "description": "Host a dinner party for friends and colleagues.",
+        "date": "2024-04-20",
+        "category": ["Social", "Personal"]
+      }
+    ]
+  }
+  
