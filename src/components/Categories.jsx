@@ -1,7 +1,7 @@
 import CategoriesItem from './CategoriesItem';
 
 const Categories = () => {
-    const categories = ['all', 'Business', 'Social', 'Home', 'Personal'];
+    const categories = ['All', 'Business', 'Social', 'Home', 'Personal'];
 
     return (
         <div className="flex gap-[12px]">

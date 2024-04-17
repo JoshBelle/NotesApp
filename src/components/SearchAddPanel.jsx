@@ -1,26 +1,16 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSearch } from '../redux/filterSlice';
-import { useGetNotesQuery, useSearchNotesQuery } from '../redux/apiSlice';
+import { useDispatch } from "react-redux";
+import { setSearch } from "../redux/searchSlice";
+
 
 const SearchAddPanel = () => {
-    const {data: notes} = useGetNotesQuery();
     
-                                                           
-
-    const dispatch = useDispatch();
-
-    const handleSearchValue = (value) => {
-        dispatch(setSearch(value));
-    };
-
-    const valueSearch = useSelector((state) => state.filter.filter);
-
-    useSearchNotesQuery(valueSearch);
+  const dispatch = useDispatch()
+  
+    
 
     return (
         <div
-            onChange={(e) => handleSearchValue(e.target.value)}
+            onChange={(e) => dispatch(setSearch(e.target.value))}
             className="flex gap-[12px]"
         >
             <input

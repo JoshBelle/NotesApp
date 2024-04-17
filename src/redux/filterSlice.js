@@ -5,16 +5,13 @@ export const filterSlice = createSlice({
     initialState: '',
     reducers: {
         setFilter: (state, action) => {
-            if (action.payload === 'all') {
+            if (action.payload === 'All') {
                 return '';
             }
             return action.payload;
         },
-        setSearch: (state, action) => {
-            return action.payload
-        }
     },
 });
 
-export const { setFilter, setSearch } = filterSlice.actions;
+export const { setFilter} = filterSlice.actions;
 export default filterSlice.reducer;
