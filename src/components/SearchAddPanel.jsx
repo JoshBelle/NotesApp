@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { setSearch } from "../redux/searchSlice";
 
 
+
 const SearchAddPanel = () => {
     
   const dispatch = useDispatch()
@@ -20,6 +21,7 @@ const SearchAddPanel = () => {
             <button className="px-4 py-2 bg-blue-500 text-white rounded-lg">
                 Add New
             </button>
+
         </div>
     );
 };

@@ -4,18 +4,17 @@ import NotesItem from './NotesItem';
 import { useGetNotesQuery, useSearchNotesQuery } from '../redux/apiSlice';
 import { useSelector } from 'react-redux';
 
-
-
 const NotesGrid = () => {
     const filter = useSelector((state) => state.filter);
     const search = useSelector((state) => state.search);
-    
+
     const { data: notes, isLoading, isError } = useGetNotesQuery(filter);
-    const { data: searchValue } = useSearchNotesQuery(search)
+    const { data: searchValue } = useSearchNotesQuery(search);
 
-    const mergeResult = notes && searchValue
-
-
+    // Получение данных по категориям
+    console.log(searchValue);
+    // Получение данных по ключевому слову
+    console.log(notes);
 
     const categoryColors = {
         All: 'bg-black-400', // черный
@@ -34,19 +33,10 @@ const NotesGrid = () => {
         return '';
     };
 
-
     return (
         <div className="w-1200 bg-slate-100 mx-auto grid grid-cols-4 gap-4 p-10">
-            {/* {notes &&
+            {notes &&
                 notes.map((note) => (
-                    <NotesItem
-                        key={note.title}
-                        color={getColor(note.category)}
-                        note={note}
-                    />
-                ))} */}
-            {mergeResult &&
-                mergeResult.map((note) => (
                     <NotesItem
                         key={note.title}
                         color={getColor(note.category)}
