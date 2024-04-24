@@ -1,20 +1,17 @@
 // NotesGrid.js
 import React, { useEffect } from 'react';
 import NotesItem from './NotesItem';
-import { useGetNotesQuery, useSearchNotesQuery } from '../redux/apiSlice';
+import { useGetNotesQuery} from '../redux/apiSlice';
 import { useSelector } from 'react-redux';
 
 const NotesGrid = () => {
     const filter = useSelector((state) => state.filter);
     const search = useSelector((state) => state.search);
 
-    const { data: notes, isLoading, isError } = useGetNotesQuery(filter);
-    const { data: searchValue } = useSearchNotesQuery(search);
+    const { data: notes, isLoading, isError } = useGetNotesQuery(filter, search);
 
-    // Получение данных по категориям
-    console.log(searchValue);
-    // Получение данных по ключевому слову
-    console.log(notes);
+    console.log(notes)
+
 
     const categoryColors = {
         All: 'bg-black-400', // черный

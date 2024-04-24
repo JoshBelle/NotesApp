@@ -6,20 +6,23 @@ export const notesApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3400/' }),
     endpoints: (builder) => ({
         getNotes: builder.query({
-            query: (category) => {
+            query: (category, search) => {
                 if (category === '') {
                     return '/notes'
                 }
-                return `/notes?category=${category}`
+                return `/notes?category=${category}&&q=Meeting`
             },
             providesTags: ['Notes'],
         }),
-        searchNotes: builder.query({
-            query: (search) => `/notes?q=${search}`,
-            providesTags: ['/notes'],
-            
-        }),
+        addNotes: builder.mutation({
+            query: (newNote) => ({
+                url:'/notes',
+                method: 'POST',
+                body: newNote
+            }),
+            providesTags: ['Notes'],
+        })
     }),
 });
 
-export const { useGetNotesQuery, useSearchNotesQuery } = notesApi;
+export const { useGetNotesQuery, useAddNotesMutation } = notesApi;

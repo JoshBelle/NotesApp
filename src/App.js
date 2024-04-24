@@ -1,7 +1,7 @@
 import './App.css';
 import NotesGrid from './components/NotesGrid';
 import TopPanel from './components/TopPanel';
-import AddPanel from "./components/AddPanel/AddPanel"
+import { useState } from 'react';
 
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
     <div className="px-10 bg-slate-100">
         <h1 className='px-10 py-5'>Notes</h1>
         <TopPanel />
-        <AddPanel/>
         <NotesGrid/>
 
     </div>
