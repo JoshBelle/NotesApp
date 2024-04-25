@@ -8,21 +8,28 @@ export const notesApi = createApi({
         getNotes: builder.query({
             query: (category, search) => {
                 if (category === '') {
-                    return '/notes'
+                    return '/notes';
                 }
-                return `/notes?category=${category}&&q=Meeting`
+                return `/notes?category=${category}&&q=Meeting`;
             },
             providesTags: ['Notes'],
         }),
         addNotes: builder.mutation({
             query: (newNote) => ({
-                url:'/notes',
+                url: '/notes',
                 method: 'POST',
                 body: newNote
             }),
             providesTags: ['Notes'],
-        })
+        }),
+        deleteNote: builder.mutation({
+            query: (noteId) => ({
+                url: `/notes/${noteId}`,
+                method: 'DELETE',
+            }),
+            invalidatesTags: ['Notes'],
+        }),
     }),
 });
 
-export const { useGetNotesQuery, useAddNotesMutation } = notesApi;
+export const { useGetNotesQuery, useAddNotesMutation, useDeleteNoteMutation } = notesApi;

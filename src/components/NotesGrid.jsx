@@ -10,7 +10,7 @@ const NotesGrid = () => {
 
     const { data: notes, isLoading, isError } = useGetNotesQuery(filter, search);
 
-    console.log(notes)
+    
 
 
     const categoryColors = {
@@ -35,7 +35,7 @@ const NotesGrid = () => {
             {notes &&
                 notes.map((note) => (
                     <NotesItem
-                        key={note.title}
+                        key={note.id}
                         color={getColor(note.category)}
                         note={note}
                     />

@@ -1,16 +1,33 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { VerticalMenu } from '../icons/VerticalMenu';
 import NotesModal from './NotesModal';
 
+
 const NotesItem = ({ note, color }) => {
 
-    const [openModal, setOpenModal] = useState(false)
 
-    const handleOpenModal = () => {
-        setOpenModal(!openModal)
-    }
+    const [isOpen, setIsOpen] = useState(false);
 
-    console.log(openModal)
+    const modalRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+
+
+    const handlerOpenModals = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <div className="flex flex-col gap-4 p-5 bg-white rounded-md shadow-md justify-between">
@@ -21,12 +38,11 @@ const NotesItem = ({ note, color }) => {
                     ></div>
                     <h2 className="font-bold">{note.title}</h2>
                 </div>
-                <div className="position relative">
-                    <button onClick={() => handleOpenModal()} className="option border bg-gray-100 p-[6px] rounded-[6px] hover:bg-blue-500 hover:text-white">
+                <div className="position relative" ref={modalRef}>
+                    <button onClick={handlerOpenModals} className="option border bg-gray-100 p-[6px] rounded-[6px] hover:bg-blue-500 hover:text-white">
                         <VerticalMenu />
                     </button>
-                    {openModal && <NotesModal />}
-                    
+                    {isOpen && <NotesModal note={note.id}/>}
                 </div>
             </div>
             <p>{note.description}</p>

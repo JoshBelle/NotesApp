@@ -4,11 +4,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const openSlice = createSlice({
     name: 'open',
-    initialState: false,
+    initialState: null,
     reducers: {
         setOpen: (state, action) => {
             state = action.payload
-            return state
+            return action.payload
         }
     }
 })

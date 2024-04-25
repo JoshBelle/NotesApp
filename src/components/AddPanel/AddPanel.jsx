@@ -44,7 +44,7 @@ const AddPanel = () => {
     };
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        <div className="fixed z-30 top-0 left-0 w-full h-full flex items-center justify-center">
             <div className="absolute w-full h-full bg-black opacity-75"></div>
             <div className="relative  bg-white w-[1000px] m-auto rounded-lg shadow-md">
                 <div className="flex justify-between py-5 px-5 border-b border-gray-300">
